@@ -1,4 +1,3 @@
-
 .anom-bar-esoteric .anom-bar-container:not(.{$containment-class}) .text-part > .main-class {
     padding-right: 3.5rem;
 }
