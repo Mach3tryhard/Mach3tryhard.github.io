@@ -1,0 +1,142 @@
+body{
+    font-family: Arial;
+}
+
+.sidenav {
+    scrollbar-color: #495AD3 #2C2C2D;
+    scrollbar-width: thin;
+    direction: rtl;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.2s;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col > div {
+    width: 100%;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row > div {
+    flex: 1 1 0;
+    width: 0;
+}
+
+/*style of divs*/
+
+#stil1{
+    font-size: 11px;
+    background-color: #121212;
+    text-align: center;
+    color: #9F9F9F;
+}
+
+#stil2{
+    font-size: 11px;
+    background-color: black;
+    text-align: left;
+    color: #C3C3C3;
+}
+#stil2:hover {
+    background: #495AD3;
+}
+
+.title{
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+/*Button animation*/
+
+.button {
+    cursor:pointer;
+    font-size: 12px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    display: block;
+    background: linear-gradient(to right, #495AD3 50%,black 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    transition: all .2s ease-out;
+}
+
+.legend {
+    font-size: 12px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    display: block;
+    background: black;
+    background-size: 201% 100%;
+    transition: all .2s ease-out;
+}
+
+.button:hover {
+    background-position: left bottom;
+}
+
+.text {
+    margin-left:8px;
+    color: #C3C3C3;
+    display: block;
+}
+
+/*CHECKBOX CSS*/
+
+.cat{
+    cursor:pointer;
+    font-size: 12px;
+    width: 100%;
+    display: block;
+    background: linear-gradient(to right, #495AD3 50%,black 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    transition: all .2s ease-out;
+}
+
+.cat:hover {
+    background-position: left bottom;
+}
+
+.cat label span {
+    cursor:pointer;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    display: block;
+}
+
+.cat label input {
+    position: absolute;
+    display: none;
+    color: #fff !important;
+}
+/* selects all of the text within the input element and changes the color of the text */
+.cat label input + span{color: #fff;}
+
+
+/* This will declare how a selected input will look giving generic properties */
+.cat input:checked + span {
+    color: #ffffff;
+    text-shadow: 0 0  6px rgba(0, 0, 0, 0.8);
+}
+
+
+/*
+This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
+*/
+
+.action input:checked + span{background-color: #495AD3;}
