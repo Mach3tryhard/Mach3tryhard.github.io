@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap');
+#page-content .quadrants > div {top: 2.25%;left: 18.5%;}
+#extra-div-1::before {font-family: 'Poppins', sans-serif;font-weight: 500 !important;font-size: 26.45px;}
+#extra-div-2::before {font-size: 1.1em;font-weight: 700;font-family: 'Poppins', sans-serif;}
+#extra-div-1 {background:rgb(33, 30, 32);box-shadow: 0px 0px 8px 4px rgb(0, 0, 0);}
+div.main-class::before, div.main-class::after, div.top-icon::before,div.top-icon::after  {-webkit-filter: brightness(125%); filter: brightness(125%); }
+#page-content .wiki-content-table tr td {text-align:center;}
+#page-content .wiki-content-table tr:first-child th {background-color:rgb(208, 208, 208); color:rgb(51,51,45);font-weight:700 !important;padding-bottom:3px !important; padding-top:3px; text-align:center;}
+#page-content .wiki-content-table tr th {background-color:rgb(35, 35, 35);color:#F0F6F0;font-weight:400;font-style:none !important;border: 1px solid #ccc; padding-bottom:20px; padding-top:10px; text-align:left;}
+
+body {font-family: 'Zen Kaku Gothic Antique', sans-serif;font-style:normal;font-weight:400 !important;background-color:rgb(51, 52, 52);color:#F0F6F0;
+    background-image: url(https://scp-wiki.wdfiles.com/local--files/scp-6793/spaced.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: difference;
+}
+
+body:before {
+  content: ' ';
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(170deg, transparent, rgb(0, 0, 0) 65%, rgb(0, 0, 0) 65%, rgb(0, 0, 0) 100%);
+  z-index: -1;
+  color:#EDEDED;
+}
+
+.anom-bar-container,.anom-bar-container *,.acs-extra,.acs-extra * {font-family: 'Poppins' !important;font-weight: 500 !important;}
+.authorbox, .authorcontent {background: #120b19;color:#F0F6F0; width:300px !important;}
+.authorlink-wrapper {margin-top: var(--author-top-adjust, .2em) !important; z-index:10 !important; }
+#page-content .authorbox {width:auto !important;} 
+.tableb .wiki-content-table {border-spacing: 3px;font-size:0.82em;}
+
+:root {
+--logo:url(https://scp-wiki.wdfiles.com/local--files/classifications-guides-and-icons-by-billith/aad3.png);
+--title:"FOUNDATION";
+--subtitle:"ASTROPHYSICAL ANOMALIES DEPT.";
+--barColor:rgb(196, 219, 196);
+--one-color:rgb(84, 65, 97) !important;
+--three-color:rgb(34, 35, 36) !important;
+}
+.footnotes-footer .footnote-footer { text-indent: -6px !important; }
+div.poppin{
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+border-radius: 5px 5px 5px 5px !important;
+}
+.breaklinker a {color: #ffffff !important;
+               }
+
+.blockquote {border-color: #ffffff;    
+                 background-color: #000000;
+     }
+.container  {position: relative;
+                 text-align: center;
+                 color: black;
+     width:100%;
+     }
+.centered   {position: absolute;
+    top: 50%;
+     left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bigtext {
+font-weight:700;
+}
+
+.danger-diamond > .bottom-icon::before {
+
+filter: contrast(0.5) !important;
+}
+
+@import url('https://scp-wiki.wdfiles.com/local--code/component%3Aacs-animation/1');
+@import url("https://scp-wiki.wdfiles.com/local--code/component:betterfootnotes/1");
+@import url(https://scp-wiki.wdfiles.com/local--code/theme%3Abasalt/1);
+@import url(https://scp-wiki.wdfiles.com/local--code/theme%3Abasalt/2);
+@import url(https://scp-wiki.wdfiles.com/local--code/theme%3Abasalt/3);
+@import url(https://scp-wiki.wdfiles.com/local--code/theme%3Abasalt/5);
+@import url(https://scp-wiki.wdfiles.com/local--code/theme%3Abasalt/6);
+@import url('https://scp-wiki.wdfiles.com/local--code/component%3Aacs-animation/1');

@@ -1,0 +1,30 @@
+
+.anom-bar-container.notice .text-part .risk-class::after {
+    background-image: url("https://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/notice-icon.svg");
+}
+
+.anom-bar-container.notice .text-part .risk-class{
+    border-left: 0.5rem solid rgba(84, 65, 97);
+    background-color: rgba(84, 65, 97,0.15);
+}
+
+.anom-bar-container.notice .danger-diamond > .right-icon::before {
+    background-image: url("https://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/notice-icon.svg");
+    background-size: contain;
+}
+
+.anom-bar-container.notice .danger-diamond > .quadrants > .right-quad  {
+    background-color:rgba(84, 65, 97,0.25);
+}
+
+.anom-bar-container.notice .text-part .risk-class::before{
+    content: ""!important;
+}
+
+.anom-bar-container.notice .danger-diamond > .right-icon::before {
+    background-color:rgb(84, 65, 97)!important;
+}
+
+.anom-bar-container.notice .text-part .risk-class::after {
+    background-color: rgb(84, 65, 97)!important;
+}

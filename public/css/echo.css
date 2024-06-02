@@ -1,0 +1,80 @@
+
+body .anom-bar-container.ekhi .danger-diamond > .quadrants > .left-quad,
+body .anom-bar-container.danger .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(255,109,0,0.25);
+    background-color: rgb(var(--four-color),0.25);
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .calibold-wrap,
+  .calibold {
+    animation-name: jumpscare;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+  }
+}
+
+@keyframes jumpscare {
+  from {
+    opacity: 0;
+    transform: scale(0.5,0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+}
+
+.calibold-wrap {
+    animation-delay: 300s;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    z-index: 20;
+    width: 302px;
+    text-align: center;
+}
+
+#page-content .calibold-wrap .collapsible-block-folded .collapsible-block-link {
+    opacity: 0;
+}
+
+.calibold {
+    animation-delay: 300s;
+    position: fixed;
+    z-index: 20;
+    background-image: url("https://scp-wiki.wdfiles.com/local--files/component%3Acustomizable-acs/calibold-jumpscare.png");
+    height: 457px;
+    width: 302px;
+    text-align: center;
+}
+
+.calibold p {
+    line-height: 457px!important;
+}
+
+.anom-bar-container.clear-6 .top-center-box > div {
+background-position: center;
+}
+
+.anom-bar-container.clear-5 .top-center-box > div {
+background-position: center;
+}
+
+.anom-bar-container.clear-4 .top-center-box > div {
+background-position: center;
+}
+
+.anom-bar-container.clear-3 .top-center-box > div {
+background-position: center;
+}
+
+.anom-bar-container.clear-2 .top-center-box > div {
+background-position: center;
+}
+
+.anom-bar-container.clear-1 .top-center-box > div {
+background-position: center;
+}

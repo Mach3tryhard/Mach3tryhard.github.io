@@ -10,7 +10,7 @@ const homeRoute = require('./routes/home');
 
 app.use(bodyParser.urlencoded({extended:false}));
 
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'/public')));
 
 app.use('/home',homeRoute);
 

@@ -1,0 +1,144 @@
+
+.authorlink-wrapper {
+    display: block;
+    margin-top:  var(--author-top-adjust, -0.5rem);
+    margin-bottom: var(--author-bottom-adjust, -0.35rem);
+    margin-right: var(--author-right-adjust, 2em);
+    padding: 0;
+    position: relative;
+}
+
+.authorlink-wrapper > a {
+    display: block;
+    width: max-content;
+    margin-left: auto; margin-right: 0;
+    margin-bottom: 0.65rem;
+    font-size: 87.5%;
+    text-align: right;
+    align-items: center;
+}
+.authorlink-wrapper > a::before {
+    content: "by";
+    color: rgb(var(--swatch-tertiary-color, 187,187,187));
+    display: inline-block;
+    margin-right: 0.25em;
+}
+.authorlink-wrapper > a::after {
+    content: "";
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    background: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke-miterlimit='10' font-size='12' width='99.961731' height='99.900673' font-family='Dialog' color-interpolation='auto' stroke='%23000' stroke-linecap='square'%3E%3Cpath d='M99.961733 49.980868q0 20.81009-14.585386 35.368356-14.585389 14.551452-35.395479 14.551452-20.81009 0-35.395479-14.551452Q0 70.790958 0 49.980868T14.585389 14.58539Q29.170778 0 49.980868 0q20.81009 0 35.395479 14.58539 14.585386 14.585388 14.585386 35.395478zm-8.177595 0q0-17.453655-12.178214-29.658992Q67.434523 8.1165383 49.980868 8.1165383T20.321876 20.321876Q8.1165386 32.527213 8.1165386 49.980868T20.321876 79.612694q12.205337 12.171444 29.658992 12.171444t29.625056-12.171444q12.178214-12.178171 12.178214-29.631826zM60.233352 24.227584q0 4.088799-3.051313 6.834989-3.051356 2.746234-7.201171 2.746234-4.149814 0-7.201171-2.746234-3.051314-2.74619-3.051314-6.834989 0-4.088756 3.051314-6.834989 3.051357-2.74619 7.201171-2.74619 4.149815 0 7.201171 2.74619 3.051313 2.746233 3.051313 6.834989zM58.341514 87.3292H41.559206V39.728384h16.782308z' stroke='none'/%3E%3C/svg%3E");
+                mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke-miterlimit='10' font-size='12' width='99.961731' height='99.900673' font-family='Dialog' color-interpolation='auto' stroke='%23000' stroke-linecap='square'%3E%3Cpath d='M99.961733 49.980868q0 20.81009-14.585386 35.368356-14.585389 14.551452-35.395479 14.551452-20.81009 0-35.395479-14.551452Q0 70.790958 0 49.980868T14.585389 14.58539Q29.170778 0 49.980868 0q20.81009 0 35.395479 14.58539 14.585386 14.585388 14.585386 35.395478zm-8.177595 0q0-17.453655-12.178214-29.658992Q67.434523 8.1165383 49.980868 8.1165383T20.321876 20.321876Q8.1165386 32.527213 8.1165386 49.980868T20.321876 79.612694q12.205337 12.171444 29.658992 12.171444t29.625056-12.171444q12.178214-12.178171 12.178214-29.631826zM60.233352 24.227584q0 4.088799-3.051313 6.834989-3.051356 2.746234-7.201171 2.746234-4.149814 0-7.201171-2.746234-3.051314-2.74619-3.051314-6.834989 0-4.088756 3.051314-6.834989 3.051357-2.74619 7.201171-2.74619 4.149815 0 7.201171 2.74619 3.051313 2.746233 3.051313 6.834989zM58.341514 87.3292H41.559206V39.728384h16.782308z' stroke='none'/%3E%3C/svg%3E");
+    -webkit-mask-position: center center;
+                mask-position: center center;
+    -webkit-mask-size: 100%;
+                mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+    margin-left: 0.2em;
+    transform: translateY(0.1em);
+
+}
+.authorlink-wrapper > a:hover::before,
+.authorlink-wrapper > a:hover::after {
+    text-decoration: none;
+}
+
+.authorlink-wrapper .authorbox {
+    display: block;
+    width: 35em;
+    max-width: 70vw;
+    color: rgb(var(--swatch-text-general, 51,51,51));
+    background-color: rgb(var(--swatch-background, 252,252,252));
+    filter: drop-shadow(0 0 3px rgba(0,0,0,0.26));
+
+    position: absolute;
+    right: 0;
+    z-index: 6;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+/* safari-specific fix */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+.authorlink-wrapper .authorbox {
+    will-change: filter;
+}
+}}
+.authorlink-wrapper .authorbox::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 100%;
+    right: 3%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgb(var(--swatch-background, 252,252,252)) transparent;
+}
+.authorlink-wrapper .authorbox::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 100%;
+    right: 0;
+    width: 100%;
+    height: 2em;
+}
+.authorcontent {
+    width: 100%;
+    padding: 0.25rem 0.95rem;
+    max-height: 50vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    font-size: 97.5%;
+    scrollbar-width: thin;
+}
+.authorcontent::-webkit-scrollbar {
+    width: 8px;
+}
+
+#page-content .authorlink-wrapper > a:focus + .authorbox,
+#page-content .authorlink-wrapper > a:active + .authorbox,
+#page-content .authorbox:hover  {
+    opacity: 1;
+    pointer-events: all;
+}
+#page-content .authorlink-wrapper > .authorbox:focus-within {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Without this, touchscreen doesn't work */
+@media (pointer: coarse) {
+    #page-content .authorlink-wrapper > a:hover + .authorbox,
+    #page-content .authorbox:hover {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+/*--  --*/
+:root {
+    --author-right-adjust: 0rem;
+}
+/*-- --*/
+
+/*--  --{$center}/
+:root {
+    --author-right-adjust: 0rem;
+}
+.authorlink-wrapper > a {
+    margin-right: auto;
+}
+#page-content .authorbox {
+    right: 50%;
+    transform: translateX(50%);
+}
+#page-content .authorbox::before {
+    right: calc(50% - 10px);
+}
+/*-- --*/

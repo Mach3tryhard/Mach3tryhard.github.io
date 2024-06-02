@@ -1,0 +1,30 @@
+
+.anom-bar-container.keneq .text-part .disrupt-class::after {
+    background-image: url("https://scp-wiki.wdfiles.com/local--files/component:anomaly-class-bar/keneq-icon.svg");
+}
+
+.anom-bar-container.keneq .text-part .disrupt-class{
+    border-left: 0.5rem solid rgba(66, 14, 24,1);
+    background-color: rgba(66, 14, 24,0.15);
+}
+
+.anom-bar-container.keneq .danger-diamond > .left-icon::before {
+    background-image: url("https://scp-wiki.wdfiles.com/local--files/component:anomaly-class-bar/keneq-icon.svg");
+    background-size: contain;
+}
+
+.anom-bar-container.keneq .danger-diamond > .quadrants > .left-quad  {
+    background-color:rgba(66, 14, 24,0.25);
+}
+
+.anom-bar-container.keneq .text-part .disrupt-class::before{
+    content: ""!important;
+}
+
+.anom-bar-container.keneq .danger-diamond > .left-icon::before {
+    background-color:rgb(66, 14, 24)!important;
+}
+
+.anom-bar-container.keneq .text-part .disrupt-class::after {
+    background-color: rgb(66, 14, 24)!important;
+}

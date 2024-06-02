@@ -1,0 +1,82 @@
+
+:root {
+    --wm-bg: var(--white-monochrome);
+    --wm-accent: var(--bright-accent);
+    --wm-border: var(--black-monochrome);
+}
+
+.collection {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.collection .articlecolumn .list-pages-item,
+.collection .articlecolumn .list-pages-item > div,
+.collection .articlecolumn .list-pages-item > p {
+  display: inline;
+}
+
+.collection .articlecolumn .list-pages-item p {
+    margin: 0;
+}
+.collection .collapsible-block {
+    display: block;
+    text-align: center;
+    padding: 0.15em;
+    background-color: rgb(var(--wm-bg));
+    border: 1px solid rgb(var(--wm-border));
+}
+
+.collection .collapsible-block-unfolded-link a , .collection .collapsible-block-folded a {
+  display: block;
+  color: rgb(var(--wm-accent));
+  font-weight: bold;
+  background-color: rgba(var(--wm-accent), 0.25);
+  margin: auto;
+  border: 2px solid rgb(var(--wm-bg));
+}
+
+.collection > .collapsible-block .collapsible-block-content {
+    text-align: left;
+}
+
+.titlecolumn {
+  width: 15%;
+  border: 1px solid rgb(var(--wm-bg));
+  background-color: rgba(var(--wm-accent), 0.25);
+  text-align: right;
+  padding: 6px;
+}
+
+.articlecolumn {
+  width: 85%;
+  background-color: rgb(var(--wm-bg));
+  padding: 3px;
+  font-weight: normal;
+  font-size: 85%;
+}
+
+.namerow {
+  color: rgb(var(--wm-border));
+  font-weight: bold;
+  background-color: rgba(var(--wm-accent), 0.25);
+  margin: 0 auto;
+  border: 2px solid rgb(var(--wm-bg));
+  text-align: center;
+}
+
+.namerow a {
+  color: rgb(var(--wm-accent));
+}
+
+.namerow p {
+    margin: 0;
+}
+
+.collectiondot {
+  padding: 0 4px;
+}
+
+.articlecolumn .list-pages-item:last-child .collectiondot {
+  display: none;
+}
