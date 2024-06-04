@@ -1,0 +1,8 @@
+.small{
+    width: 6px;
+    height: 6px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    right:100px;
+    top:100px
+  }

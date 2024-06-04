@@ -25,7 +25,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device.width, initial-scale=1.0">
     <title>HOME</title>
-    <script src="script/script.js"></script> 
+    <script src="script/script.js"></script>
+    <!--<script src="script/cursor.js"></script> -->
     <style>
         iframe.scpnet-interwiki-frame {
             height: 0;
@@ -53,48 +54,36 @@
     <link rel="stylesheet" href="css/sierra.css">
     <link rel="stylesheet" href="css/vector.css">
     <link rel="stylesheet" href="css/tango.css">
+    <!--<link rel="stylesheet" href="css/cursor.css">-->
     <!--<script type="text/javascript"
         src="https://d3g0gp89917ko0.cloudfront.net/v--b466fa696223/common--modules/js/list/ListPagesModule.js"></script>
     <script type="text/javascript"
         src="https://d3g0gp89917ko0.cloudfront.net/v--b466fa696223/common--modules/js/pagerate/PageRateWidgetModule.js"></script>-->
 </head>
+<!--<div id="cursorsmall"></div>-->
 <body style="margin:0;">
-    <!--<div style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333;position: fixed;top: 0;width: 100%;">
-        <div style="float: left;"><a style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;cursor:pointer;" onclick="openNav()">&#9776;</a></div>
-        <div style="float: left;"><a style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;" class="active" href="#home">About</a></div>
-        <div style="float: left;"><a style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;" href="#news">Community</a></div>
-        <div style="float: left;"><a style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;" href="#contact">Resources</a></div>
-        <div style="float: left;"><a style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;" href="#about">Sister Sites</a></div>
-        <div style="float: left;"><a style="display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;" href="#about">Contact Us</a></div>
-    </div>-->
     <div class="nav">
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
-        </div>
-        <div class="nav-btn">
-          <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
         </div>
         <div class="nav-links" onmouseleave="closebar()" onmouseover="openNav();rez=0;">
             <a class="hoverbutton" style="cursor:pointer;
             padding: 10px 15px 13px 15px;
             font-size: 28px;">&#9776;</a>
         </div>
-        <div class="nav-links" style="padding-left: 10px;"  onmouseover="closeNav()">
-            <img src="images/Logo.png" alt="Your Logo" class="logo">
+        <div class="nav-links" style="padding-left: 10px;padding-top: 2px;"  onmouseover="closeNav()">
+            <img href="#" target="_blank" src="images/Logo.png" alt="Your Logo" class="logo">
         </div>
-        <div class="nav-links" style="padding-left: 70px;"  onmouseover="closeNav()">
-            <div style="display: inline-block; height: 60px;padding: 17px 10px 13px 10px;text-decoration: none;color: #C3C3C3;color: #efefef;@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap') ;font-family: Sofia Sans;font-optical-sizing: auto;font-weight: 800;font-style: normal;" class="my_name">MATEI SÎRGHE</div>
+        <div class="nav-links"  style="padding-left: 50px;" onmouseover="closeNav()">
+            <div href="#" target="_blank" class="my_name">MATEI SÎRGHE</div>
         </div>
-        <div class="nav-links" style="padding-left: 10px;"  onmouseover="closeNav()">
-            <a href="#">About</a>
-            <a href="#">Community</a>
-            <a href="#">Resources</a>
-            <a href="#">Sister Sites</a>
-            <a href="#">Contact Us</a>
+        <div class="nav-links" style="padding-left: 30px;"  onmouseover="closeNav()">
+            <a href="#">ABOUT
+            </a><a class="button1" href="#">COMMUNITY
+            </a><a href="#">RESOURCES
+            </a><a href="#">SISTER SITES
+            </a><a href="#">CONTACT US
+            </a>
         </div>
       </div>
     <div id="mySidenav" class="sidenav" onmouseleave="closebar()">
