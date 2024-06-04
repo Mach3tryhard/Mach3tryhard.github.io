@@ -6,12 +6,16 @@ body{
     scrollbar-color: #495AD3 #2C2C2D;
     scrollbar-width: thin;
     direction: rtl;
-    height: 100%;
+    top:60px;
+    height: calc(100vh - 60px);
     position: fixed;
     z-index: 1;
     background-color: black;
     overflow-x: hidden;
     transition: 0.2s;
+    transition-delay: 150ms;
+    transition-timing-function: ease-in-out;
+    width: 0px;
 }
 
 .flex-col {
