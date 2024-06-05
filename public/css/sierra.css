@@ -3,7 +3,7 @@ body{
 }
 
 .sidenav {
-    scrollbar-color: #495AD3 #2C2C2D;
+    scrollbar-color: #E23C3F #2C2C2D;
     scrollbar-width: thin;
     direction: rtl;
     top:60px;
@@ -53,7 +53,7 @@ body{
     color: #C3C3C3;
 }
 #stil2:hover {
-    background: #495AD3;
+    background: #E23C3F;
 }
 
 .title{
@@ -71,7 +71,7 @@ body{
     padding-bottom: 7px;
     width: 100%;
     display: block;
-    background: linear-gradient(to right, #495AD3 50%,black 50%);
+    background: linear-gradient(to right, #E23C3F 50%,black 50%);
     background-size: 201% 100%;
     background-position: right bottom;
     transition: all .2s ease-out;
@@ -105,7 +105,7 @@ body{
     font-size: 12px;
     width: 100%;
     display: block;
-    background: linear-gradient(to right, #495AD3 50%,black 50%);
+    background: linear-gradient(to right, #E23C3F 50%,black 50%);
     background-size: 201% 100%;
     background-position: right bottom;
     transition: all .2s ease-out;
@@ -143,4 +143,4 @@ body{
 This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
 */
 
-.action input:checked + span{background-color: #495AD3;}
+.action input:checked + span{background-color: #E23C3F;}

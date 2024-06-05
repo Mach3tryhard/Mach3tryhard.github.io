@@ -14,10 +14,13 @@ function closebar()
 }
 
 function openNav() {
+    document.getElementById("mySidenav").style.left = "0px";
     document.getElementById("mySidenav").style.width = "267px";
 }
 
 function closeNav() {
     rez=0;
-    document.getElementById("mySidenav").style.width = "0px";
+    document.getElementById("mySidenav").style.left = "-267px";
+    document.getElementById("mySidenav").style.width = "267px";
+    //document.getElementById("mySidenav").style.width = "0px";
 }
