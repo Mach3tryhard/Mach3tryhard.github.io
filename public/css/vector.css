@@ -11,6 +11,7 @@ div.scroller{
     width: 1120px;
     padding-top: 85px;
     font-family: Sofia Sans;
+    padding-bottom: 80px;
   }
 
   ::-moz-selection { /* Code for Firefox */
@@ -41,3 +42,61 @@ div.scroller{
     background-color: transparent;
     text-decoration: underline;
   }
+
+  #footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1A1A1C;
+    color: white;
+    text-align: center;
+ }
+
+.hr-line-primary{
+  width:100%;
+  margin:0;
+  height:20px;
+  border:none;
+  color:transparent;
+  overflow:hidden;
+  max-width:1280px;
+  margin:auto;
+  background: url('https://scp-wiki.wdfiles.com/local--files/classifications-guides-and-icons-by-billith/aad3.png') no-repeat center;
+  display:flex;
+  align-items:center;
+}
+.hr-line-primary:before{
+  content:"";
+  flex:1 0 100%;
+  height:5px;
+  background:linear-gradient(to right, #6c3dd1 calc(50% - 30px), transparent calc(50% - 30px),transparent calc(50% + 30px), #6c3dd1 calc(50% + 30px));
+}
+
+/* second example using html entity */
+
+.hr{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  border:none;
+  padding:0;
+  background:none;
+  color:transparent;
+  margin:1em 0;
+  height:2rem;
+  line-height:2rem;
+  overflow:hidden;
+}
+.hr:before{
+  content:"\221E";
+  font-family:monospace;
+  color:#6c3dd1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:4rem;
+  flex:1 0 100%;
+  background:linear-gradient(to right, #6c3dd1 calc(50% - 30px), transparent calc(50% - 30px),transparent calc(50% + 30px), #6c3dd1 calc(50% + 30px));
+  height:5px;
+}
