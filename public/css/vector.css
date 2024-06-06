@@ -1,7 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+div.scroller{
+  scrollbar-color: #E23C3F #2C2C2D;
+  scrollbar-width: thin;
+}
+
 .center {
     margin: auto;
-    width: 1100px;
-    padding-top: 90px;
+    width: 1120px;
+    padding-top: 85px;
+    font-family: Sofia Sans;
   }
 
   ::-moz-selection { /* Code for Firefox */
