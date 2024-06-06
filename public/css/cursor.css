@@ -1,8 +1,10 @@
-.small{
-    width: 6px;
-    height: 6px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    right:100px;
-    top:100px
-  }
+#cursor{
+  pointer-events: none;
+  z-index: 101;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 100%;
+  margin-bottom: 20rem;
+}

@@ -14,6 +14,16 @@ div.scroller{
     padding-bottom: 80px;
   }
 
+  @media (max-width:1120px){
+    .center {
+      margin: auto;
+      width: 90%;
+      padding-top: 85px;
+      font-family: Sofia Sans;
+      padding-bottom: 80px;
+    }
+  }
+
   ::-moz-selection { /* Code for Firefox */
     background: #E23C3F;
   }
