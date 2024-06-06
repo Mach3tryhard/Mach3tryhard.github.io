@@ -1,10 +1,10 @@
 #cursor{
+  visibility: visible;
   pointer-events: none;
-  z-index: 101;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 100%;
-  margin-bottom: 20rem;
+  z-index: 99;
+  position:fixed;
+  width: 15px;
+  height: 15px;
+  background-image: url("https://scp-wiki.wdfiles.com/local--files/scp-7396/2.gif")!important;
+  background-position: 500px 500px;
 }

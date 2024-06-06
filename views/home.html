@@ -70,8 +70,8 @@
         src="https://d3g0gp89917ko0.cloudfront.net/v--b466fa696223/common--modules/js/pagerate/PageRateWidgetModule.js"></script>-->
 </head>
 <body style="margin:0;scrollbar-color: #E23C3F #2C2C2D;scrollbar-width: thin;">
-    <!--<div class="bar-three" id="cursor"></div><script src="script/cursor.js"></script>-->
-    <div class="nav">
+    <div id="cursor"></div><script src="script/cursor.js"></script>
+    <div class="nav" onmouseover="hide()" onmouseleave="unhide()">
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
         </div>
@@ -95,7 +95,7 @@
             </a>
         </div>
       </div>
-    <div id="mySidenav" class="sidenav" onmouseleave="closebar()">
+    <div id="mySidenav" class="sidenav" onmouseleave="closebar();unhide()" onmouseover="hide()" >
         <div class="flex-col" id="stil1">
             <div class="side-block media" style="padding: 10px 0; background: black;">
                 <div style="text-align: center;text-decoration: none;">
