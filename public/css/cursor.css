@@ -1,4 +1,5 @@
 #cursor{
+  border:solid 1px white;
   visibility: visible;
   pointer-events: none;
   z-index: 99;

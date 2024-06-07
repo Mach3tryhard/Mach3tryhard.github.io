@@ -97,7 +97,7 @@
       </div>
     <div id="mySidenav" class="sidenav" onmouseleave="closebar();unhide()" onmouseover="hide()" >
         <div class="flex-col" id="stil1">
-            <div class="side-block media" style="padding: 10px 0; background: black;">
+            <div class="side-block media" style="padding: 10px 0; background: #1B1B1D;">
                 <div style="text-align: center;text-decoration: none;">
                     <a style="text-decoration: none;" href="https://discord.com/invite/scp">
                         <img src="https://scp-wiki.wikidot.com/local--files/nav:side/icon-Discord-2023.png" alt="Discord" class="image">
@@ -125,36 +125,36 @@
             <div>
                 <div class="title">OFFICIAL WEBSITE URLS</div>
                 <div class="flex-container" id="stil2">
-                    <div class="button">
-                        <div class="text"><a href="https://scp-wiki.wikidot.com/guide-for-newcomers" style="text-decoration: none;color: #C3C3C3">Guide for Newcomers</a></div>
+                    <div onclick="window.location.href='https://example.com'" class="button">
+                        <div class="text"><a style="text-decoration: none;color: #C3C3C3">Guide for Newcomers</a></div>
                     </div>
                 </div>
                 <div class="flex-container" id="stil2">
-                    <div class="button">
-                        <div class="text"><a href="https://scp-wiki.wikidot.com/system:join" style="text-decoration: none;color: #C3C3C3">Join the Site</a></div>
+                    <div onclick="window.location.href='https://example.com'" class="button">
+                        <div class="text"><a style="text-decoration: none;color: #C3C3C3">Join the Site</a></div>
                     </div>
                 </div>
                 <div class="flex-row" style="font-weight: bold;">
-                    <div class="button">
-                        <div class="text"><a href="https://scp-wiki.wikidot.com/forum:start" style="text-decoration: none;color: #C3C3C3">Forum</a></div>
+                    <div onclick="window.location.href='https://example.com'" class="button">
+                        <div class="text"><a style="text-decoration: none;color: #C3C3C3">Forum</a></div>
                     </div>
-                    <div class="button">
-                        <div class="text"><a href="https://scp-wiki.wikidot.com/" style="text-decoration: none;color: #C3C3C3">Main</a></div>
+                    <div onclick="window.location.href='https://example.com'" class="button">
+                        <div  class="text"><a style="text-decoration: none;color: #C3C3C3">Main</a></div>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="title">ABOUT US</div>
                 <div class="flex-row" id="stil2">
-                    <div class="button">
+                    <div onclick="window.location.href='https://example.com'" class="button">
                         <div class="text">Here should be</div>
                     </div>
-                    <div class="button">
+                    <div onclick="window.location.href='https://example.com'" class="button">
                         <div class="text">Some meta shit</div>
                     </div>
                 </div>
                 <div class="flex-container" id="stil2">
-                    <div class="button">
+                    <div onclick="window.location.href='https://example.com'" class="button">
                         <div class="text">like not our real names</div>
                     </div>
                 </div>
@@ -162,132 +162,44 @@
             <div>
                 <div class="title">NODE INFORMATION</div>
                 <div class="flex-container" id="stil2">
-                    <div onclick="GoLink(thelink)" id="pagelink" class="button">
-                        <div class="text"><a id="headlink" style="text-decoration: none;color: #C3C3C3">[CLICK ON A NODE]</a></div>
+                    <div onclick="window.location.href='https://example.com'" class="button">
+                        <div class="text"><a id="type" style="text-decoration: none;color: #C3C3C3">[CLICK ON A NODE]</a></div>
                     </div>
                 </div>
                 <div class="flex-container" id="stil2">
-                    <div class="button">
-                        <div class="text"><a id="connections" href="" style="text-decoration: none;color: #C3C3C3">[TO SELECT IT]</a></div>
+                    <div onclick="window.location.href='https://example.com'" class="button">
+                        <div class="text"><a id="type" style="text-decoration: none;color: #C3C3C3">[TO SELECT IT]</a></div>
                     </div>
                 </div>
                 <div class="flex-container" id="stil2">
-                    <div class="button">
-                        <div class="text"><a id="type" href="" style="text-decoration: none;color: #C3C3C3">[AND DISPLAY INFORMATION]</a></div>
+                    <div onclick="window.location.href='https://example.com'" class="button">
+                        <div class="text"><a id="type" style="text-decoration: none;color: #C3C3C3">[AND DISPLAY INFORMATION]</a></div>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="title">TAGS OF NODE</div>
                 <div id="parenttag"></div>
-                <div id="del" class="flex-container" id="stil2">
-                    <div class="button">
-                        <div class="text"><a id="type" href="" style="text-decoration: none;color: #C3C3C3">[DATA REDACTED]</a></div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="title">FILTER NODES</div>
-                <div class="flex-row">
-                    <div class="cat action">
-                        <label>
-                            <input id="scpSeries3_button" onclick="updateFilters('scpSeries3')" class="text" type="checkbox" checked="true"><span>Show Series III</span>
-                        </label>
-                    </div>
-                    <div class="cat action">
-                        <label>
-                            <input id="scpSeries2_button" onclick="updateFilters('scpSeries2')" class="text" type="checkbox" checked="true"><span>Show Series II</span>
-                        </label>
-                    </div>
-                    <div class="cat action">
-                        <label>
-                            <input id="scpSeries1_button" onclick="updateFilters('scpSeries1')" class="text" type="checkbox" checked="true"><span>Show Series I</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="flex-row">
-                    <div class="cat action">
-                        <label>
-                            <input id="scpSeries6_button" onclick="updateFilters('scpSeries6')" class="text" type="checkbox" checked="true"><span>Show Series VI</span>
-                        </label>
-                    </div>
-                    <div class="cat action">
-                        <label>
-                            <input id="scpSeries5_button" onclick="updateFilters('scpSeries5')" class="text" type="checkbox" checked="true"><span>Show Series V</span>
-                        </label>
-                    </div>
-                    <div class="cat action">
-                        <label>
-                            <input id="scpSeries4_button" onclick="updateFilters('scpSeries4')" class="text" type="checkbox" checked="true"><span>Show Series IV</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="flex-row">
-                    <div class="cat action">
-                        <label>
-                            <input id="scpSeries9_button" onclick="updateFilters('scpSeries9')" class="text" type="checkbox" checked="true"><span>Show Series IX</span>
-                        </label>
-                    </div>
-                    <div class="cat action">
-                        <label>
-                            <input id="scpSeries8_button" onclick="updateFilters('scpSeries8')" class="text" type="checkbox" checked="true"><span>Show Series VIII</span>
-                        </label>
-                    </div>
-                    <div class="cat action">
-                        <label>
-                            <input id="scpSeries7_button" onclick="updateFilters('scpSeries7')" class="text" type="checkbox" checked="true"><span>Show Series VII</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="flex-row">
-                    <div class="cat action">
-                        <label>
-                            <input id="tale_button" onclick="updateFilters('tale')" class="text" type="checkbox" value="0"><span>Show Tales</span>
-                        </label>
-                    </div>
-                    <div class="cat action">
-                        <label>
-                            <input id="hub_button" onclick="updateFilters('hub')" class="text" type="checkbox" value="0"><span>Show Hubs</span>
-                        </label>
-                    </div>
-                    <div class="cat action">
-                        <label>
-                            <input id='supplement_button' onclick="updateFilters('supplement')" class="text" type="checkbox" value="0"><span>Show Others</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="flex-row">
-                    <div class="cat action">
-                        <label>
-                            <input id="scp_button" onclick="updateFilters('scp')" class="text" type="checkbox" checked="true"><span>Show SCP-001s</span>
-                        </label>
-                    </div>
-                    <div class="cat action">
-                        <label>
-                            <input id="author_button" onclick="updateFilters('author')" class="text" type="checkbox" value="0"><span>Show Authors</span>
-                        </label>
-                    </div>
-                    <div class="cat action">
-                        <label>
-                            <input id="goi_button" onclick="updateFilters('goi')" class="text" type="checkbox" value="0"><span>Show GoI</span>
-                        </label>
+                <div class="flex-container" id="stil2">
+                    <div onclick="window.location.href='https://example.com'" class="button">
+                        <div class="text"><a id="type" style="text-decoration: none;color: #C3C3C3">[DATA REDACTED]</a></div>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="title">Display Animations</div>
                 <div class="flex-container" id="stil2">
-                    <div class="button">
+                    <div onclick="window.location.href='https://example.com'" class="button">
                         <div class="text"><a>example</a></div>
                     </div>
                 </div>
                 <div class="flex-container" id="stil2">
-                    <div class="button">
+                    <div onclick="window.location.href='https://example.com'" class="button">
                         <div class="text"><a>example</a></div>
                     </div>
                 </div>
                 <div class="flex-container" id="stil2">
-                    <div class="button">
+                    <div onclick="window.location.href='https://example.com'" class="button">
                         <div class="text"><a>example</a></div>
                     </div>
                 </div>

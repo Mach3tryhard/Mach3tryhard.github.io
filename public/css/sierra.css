@@ -3,14 +3,14 @@ body{
 }
 
 .sidenav {
-    scrollbar-color: #E23C3F #2C2C2D;
+    scrollbar-color: #E23C3F #2F3030;
     scrollbar-width: thin;
     direction: rtl;
     top:60px;
     height: calc(100vh - 60px);
     position: fixed;
     z-index: 1;
-    background-color: black;
+    background-color: #1B1B1D;
     overflow-x: hidden;
     transition: 0.2s;
     transition-delay: 150ms;
@@ -41,14 +41,14 @@ body{
 
 #stil1{
     font-size: 11px;
-    background-color: #121212;
+    background-color: #2F3030;
     text-align: center;
     color: #9F9F9F;
 }
 
 #stil2{
     font-size: 11px;
-    background-color: black;
+    background-color: #1B1B1D;
     text-align: left;
     color: #C3C3C3;
 }
@@ -71,8 +71,8 @@ body{
     padding-bottom: 7px;
     width: 100%;
     display: block;
-    background: linear-gradient(to right, #E23C3F 50%,black 50%);
-    background-size: 201% 100%;
+    background: linear-gradient(to right, #E23C3F 50%,#1B1B1D 50%);
+    background-size: 202% 100%;
     background-position: right bottom;
     transition: all .2s ease-out;
 }
@@ -83,7 +83,7 @@ body{
     padding-bottom: 7px;
     width: 100%;
     display: block;
-    background: black;
+    background: #1B1B1D;
     background-size: 201% 100%;
     transition: all .2s ease-out;
 }
@@ -93,6 +93,7 @@ body{
 }
 
 .text {
+    font-weight: 600;
     margin-left:8px;
     color: #C3C3C3;
     display: block;
@@ -105,7 +106,7 @@ body{
     font-size: 12px;
     width: 100%;
     display: block;
-    background: linear-gradient(to right, #E23C3F 50%,black 50%);
+    background: linear-gradient(to right, #E23C3F 50%,#1B1B1D 50%);
     background-size: 201% 100%;
     background-position: right bottom;
     transition: all .2s ease-out;
