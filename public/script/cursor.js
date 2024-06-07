@@ -5,8 +5,8 @@ const moveCursor = (e)=> {
   const mouseX = e.clientX;
   //console.log(mouseX);
   //console.log(mouseY);
-  cursorPointed.style.transform = `translate3d(${mouseX-22}px, ${mouseY-22}px, 0) rotate(45deg)`;
-  cursorPointed.style.backgroundPosition = mouseX%1000+500+"px "+mouseY%1000+"px";
+  cursorPointed.style.transform = `translate3d(${mouseX-22}px, ${mouseY-22}px, 0) `;/*rotate(45deg)*/
+  cursorPointed.style.backgroundPosition = mouseX%1000+"px "+mouseY%1000+"px";
 
 }
 

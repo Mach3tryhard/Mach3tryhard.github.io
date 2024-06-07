@@ -1,6 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
 
+.scroller {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #E23C3F #2C2C2D;
+}
+
 body.scroller{
   scrollbar-color: #E23C3F #2C2C2D;
   scrollbar-width: thin;
@@ -9,6 +15,21 @@ body.scroller{
 ::-webkit-scrollbar {
   scrollbar-color: #E23C3F #2C2C2D;
   scrollbar-width: thin;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: thin;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E23C3F; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2C2C2D; 
 }
 
 .center {
