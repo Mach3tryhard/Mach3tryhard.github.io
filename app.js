@@ -8,9 +8,13 @@ const app = express();
 
 const homeRoute = require('./routes/home');
 
+
+
 app.use(bodyParser.urlencoded({extended:false}));
 
-app.use(express.static(path.join(__dirname,'/public')));
+app.use(express.static(path.join(__dirname,'/public'), {
+    redirect: false
+}));
 
 app.use('/home',homeRoute);
 
@@ -18,8 +22,5 @@ app.use((req, res, next) => {
     res.status(404).sendFile(path.join(__dirname,'views','404.html'));
 });
 
-app.get('/achievements', function (req, res) {
-    res.sendfile(homeRoute + '/achievements.html');
-});
 
 app.listen(3000);
