@@ -83,7 +83,7 @@ body {margin:0;}
     display: none;
   }
   
-  @media (max-width:600px) {
+  @media (max-width:100px) {
     .nav > .nav-btn {
       display: inline-block;
       position: absolute;
