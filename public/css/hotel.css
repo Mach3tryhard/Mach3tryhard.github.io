@@ -68,7 +68,8 @@ border-radius: 5px 5px 5px 5px !important;
 }
 
 .bigtext {
-font-weight:700;
+  padding: 20px 20px 20px 20px;
+  font-weight:700;
 }
 
 .danger-diamond > .bottom-icon::before {
