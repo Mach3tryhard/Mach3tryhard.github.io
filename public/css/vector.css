@@ -136,3 +136,18 @@ body.scroller{
   background:linear-gradient(to right, #6c3dd1 calc(50% - 30px), transparent calc(50% - 30px),transparent calc(50% + 30px), #6c3dd1 calc(50% + 30px));
   height:5px;
 }
+
+#buttones:hover{
+  border-radius: 0px 50px;
+  transform: scale(1.05);
+  transition: 0.2s;
+  background-color: #E23C3F;
+  color:#0D0D0F;
+}
+#buttones:not(:hover){
+  border-radius: 0px 50px;
+  transform: scale(1);
+  transition: 0.2s;
+  background-color: #0D0D0F;
+  color:#E23C3F;
+}

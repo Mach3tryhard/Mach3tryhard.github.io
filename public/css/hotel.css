@@ -26,6 +26,7 @@ body:before {
   top: 0;
   width: 100%;
   height: 100%;
+  /*background-image: url(https://scp-wiki.wdfiles.com/local--files/scp-6793/spaced.png);*/ /*dark mode*/
   background-image: linear-gradient(170deg, transparent, rgb(0, 0, 0) 65%, rgb(0, 0, 0) 65%, rgb(0, 0, 0) 100%);
   z-index: -1;
   color:#EDEDED;
