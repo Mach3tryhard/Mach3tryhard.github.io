@@ -1,0 +1,376 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Matei Sirghe's CV},
+    pdfauthor={Matei Sirghe},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro} 
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    % avoid page braking right after the section title
+    \needspace{4\baselineskip}
+    % make the font size of the section title large and color it with the primary color
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
+    % from the end of the title to the end of the body
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+% \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in January 2025}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \fontsize{30 pt}{30 pt}
+        \textbf{Sîrghe Matei-Ștefan}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Anastasie Panu Street, Bucharest, Romania}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:matei.sirghe2@gmail.com}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}matei.sirghe2@gmail.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+40 770 952 165}{{\footnotesize\faPhone*}\hspace*{0.13cm}40 770 952 165}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://mach3tryhard.github.io/FMI-CTI/}{{\footnotesize\faLink}\hspace*{0.13cm}https://mach3tryhard.github.io/FMI-CTI/}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/matei-sirghe-b56783312/}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}matei-sirghe}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/Mach3tryhard}{{\footnotesize\faGithub}\hspace*{0.13cm}Mach3tryhard}}%
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+    
+    \section{}
+
+    \begin{onecolentry}
+        \begin{highlightsforbulletentries}
+
+
+        \item Goal oriented person with the ability to deliver results within deadlines, strong decision making
+and problem solving skills, ability to motivate and lead others in a team environment
+        \item Looking for new experiences, at high professional standards, in an effectively and timely
+manner
+
+
+        \end{highlightsforbulletentries}
+    \end{onecolentry}
+
+    \section{Education}
+
+        \begin{threecolentry}{\textbf{}}{
+            2019 – 2023
+        }
+            \textbf{Tudor Vianu National College of Computer Science}
+        \end{threecolentry}
+        
+        \begin{threecolentry}{\textbf{}}{
+            2024 – 2028
+        }
+            \textbf{University of Bucharest}, Faculty of Mathematics and Computer Science
+            \begin{highlights}
+                \item \textbf{Major in:} Computer Engineering
+            \end{highlights}
+
+        \end{threecolentry}        
+
+    
+    \section{Volunteering}        
+        \begin{twocolentry}{
+            Bucharest
+
+        2023
+        }
+            \textbf{Romanian Masters of Mathematics, Romanian Masters of Informatics}
+            \begin{highlights}
+                \item Helped international teams, guiding them throughout the contest calendar
+            \end{highlights}
+        \end{twocolentry}
+
+    \section{Projects}
+
+
+
+        
+        \begin{twocolentry}{
+            \href{https://github.com/Mach3tryhard/Lumturo}{Lumturo}
+        }
+            \textbf{Lumturo (Game made in Godot)}
+            \begin{highlights}
+                \item Develop a 2d platformer in the Godot game engine
+                \item Tools Used: GDScript
+            \end{highlights}
+        \end{twocolentry}
+
+
+
+    \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            \href{https://github.com/DROP-TABLE-taskforces/scp-graph}{SCP-Graph}
+        }
+            \textbf{SCP-Graph}
+            \begin{highlights}
+                \item Graphical visualisation for all the connections between stories that the SCP Foundation website has to offer
+                \item Tools Used: C++, Shell, HTML, JavaScript, JSON
+            \end{highlights}
+        \end{twocolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            \href{https://github.com/Mach3tryhard/AICatan-For-some-reason-}{AICatan}
+        }
+            \textbf{Catan-AI}
+            \begin{highlights}
+                \item AI Catan Implementation
+                \item Tools Used: HTML, CSS, JavaScript, Python
+            \end{highlights}
+        \end{twocolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            \href{https://gitlab.com/mateisirghe1/Fnaf6-Remastered}{FNaF 6-3D}
+        }
+            \textbf{Freddy fazbear pizzeria simulator reimagined in 3D}
+            \begin{highlights}
+                \item 2D game ported to 3D with new implemented mechanics
+                \item Tools Used: Unity Engine, C\#
+            \end{highlights}
+        \end{twocolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            \href{https://github.com/Mach3tryhard/FMI-CTI/tree/main/Site}{My Website}
+        }
+            \textbf{My website with all my computer science skills}
+            \begin{highlights}
+                \item My computer science journey
+                \item Tools Used: Vanilla Javascript, CSS, HTML
+            \end{highlights}
+        \end{twocolentry}
+        
+    \section{Awards}
+
+        
+        \begin{onecolentry}
+            \textbf{Romanian National Olympiad in Informatics:} 
+            \begin{highlights}
+                \item Placed 30th bronze medal in 2017
+                \item Placed 55th in 2019
+                \item Placed 84th in 2022
+                \item Placed 58th in 2024
+            \end{highlights}
+        \end{onecolentry}
+         \vspace{0.2 cm}
+        \begin{onecolentry}
+        \textbf{International Competition Mooncamp ESA: } Participation (high school category)
+        \end{onecolentry}
+        \begin{onecolentry}
+        \textbf{Qube2Space International Competition: } Top 10 placement (high school category)
+        \end{onecolentry}
+        \vspace{0.2 cm}
+    
+    \section{Courses}
+
+        
+        \begin{onecolentry}
+            \textbf{Oracle Academy:} Database Design
+        \end{onecolentry}
+         \vspace{0.2 cm}
+        \begin{onecolentry}
+            \textbf{High School:} Informatics certificate
+        \end{onecolentry}
+        \vspace{0.2 cm}
+
+    
+    \section{Skills}
+
+        
+        \begin{onecolentry}
+            \textbf{Coding Languages:} C++, C, C\#, JavaScript, HTML, CSS
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Languages: }Romanian, English (C1 Cambrige)
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Technologies:} Unity Engine, Godot Engine, Express , NodeJS
+        \end{onecolentry}
+
+
+    
+
+\end{document}

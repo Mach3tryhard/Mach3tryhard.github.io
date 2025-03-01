@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sîrghe Matei Projects</title>
+    <link rel="icon" type="image/x-icon" href="/Site/Media/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        
+        @font-face {
+            font-family: 'CelesteNetFont';
+            src: url('/path-to-font/celestenet.woff2') format('woff2'),
+                 url('/path-to-font/celestenet.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @layer utilities {
+            .font-celestenet {
+                font-family: 'Poppins', sans-serif;
+            }
+            .bg-dark {
+                background-color: #10111C;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+            }
+            .bg-light {
+                background-color: #E7E2F3;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+            }
+        }
+        .video-bg {
+            position: absolute;
+            width: 100%;
+            height: 40%;
+            object-fit: center;
+            filter: blur(5px);
+        }
+        .header-content {
+            position: relative;
+        }
+        .middle-section {
+            background: url('Site/Media/background.png')  no-repeat center center fixed;
+            z-index: 3;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="relative">
+    <video class="video-bg" autoplay loop muted>
+        <source src="Site/Media/TitleBack.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header class="text-white py-44 bg-black">
+        <div class="container mx-auto text-center header-content rounded-none">
+            <h1 class="font-celestenet text-6xl font-bold mb-10 tracking-wider">Sîrghe Matei</h1>
+            <a class="font-celestenet text-xm ">My work and projects. Link to old <a class="text-purple-500 font-celestenet text-xm" href="https://mach3tryhard.github.io/">website</a></a>
+            <div class="flex justify-center py-7">
+                <a href="Site/CV/main.pdf" download class="bg-purple-500 hover:bg-purple-700 text-white text-2xl  py-3 px-8 rounded-sm mr-5 ">
+                    <i class="fas fa-download mr-2"></i>Download CV
+                </a>
+                <button class="bg-purple-500 hover:bg-purple-700 text-white text-2xl py-2 px-8 rounded-sm" onclick="GoToPage('socials')">
+                    <i class="fas fa-user mr-2"></i>My socials
+                </button>
+            </div>
+        </div>
+    </header> 
+    <div class="middle-section text-center header-content py-12 ">
+        <div class="flex justify-between items-start max-w-full px-12 space-x-12">
+            <!-- Left Side -->
+            <div class="w-1/3 flex flex-col space-y-8">
+                <div class="bg-dark py-8 px-6 rounded-xl shadow">
+                    <h1 class="font-celestenet text-left text-white text-2xl font-bold mb-2 tracking-wider">My work</h1>
+                    <p class="font-celestenet text-left text-white mt-4">
+                        What I am currently working on:
+                    </p>
+                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('main')">
+                        Main
+                    </button>
+                    <p class="font-celestenet text-left text-white mt-4">
+                        Geometry and math related projects:
+                    </p>
+                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('geometry')">
+                        Geometry and Math
+                    </button>
+                    <p class="font-celestenet text-left text-white mt-4">
+                        Physics and simulation related projects:
+                    </p>
+                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('physics')">
+                        Physics
+                    </button>
+                    <p class="font-celestenet text-left text-white mt-4">
+                        Competitive programming websites I use:
+                    </p>
+                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('algorithm')">
+                        Competitive programming
+                    </button>
+                    <p class="font-celestenet text-left text-white mt-4">
+                        Games I have made in my free time:
+                    </p>
+                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('games')">
+                        Games
+                    </button>
+                    <p class="font-celestenet text-left text-white mt-4">
+                        A.I. and Machine Learning projects:
+                    </p>
+                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('machinelearning')">
+                        Machine learning
+                    </button>
+                    <p class="font-celestenet text-left text-white mt-4">
+                        Website and visualizer projects:
+                    </p>
+                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('websites')">
+                        Websites
+                    </button>
+                    <p class="font-celestenet text-left text-white mt-4">
+                        All of my socials:
+                    </p>
+                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('socials')">
+                        Socials
+                    </button>
+                </div>
+            </div>
+            <!-- Right Side -->
+            <div class="w-2/3 flex flex-col space-y-8">
+                <div class="bg-light py-8 px-6 rounded-xl shadow">
+                    <div class="flex items-center space-x-4 mt-2 flow-root">
+                        <img class="float-left w-16 h-16 rounded-md" src="Site/Media/unibuc.jpg" alt="unibuc">
+                        <p class="font-celestenet text-black mt-2 float-left">
+                            Currenly doing my undergraduate studies at University of Bucharest.
+                        </p>
+                        <p class="font-celestenet text-black mt-2 float-left">
+                            Computer Science and Information Technology specialization.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 flow-root mt-2">
+                        <img class="float-left w-16 h-16 rounded-md" src="Site/Media/fmi.png" alt="unibuc">
+                        <p class="float-left font-celestenet text-black mt-6">
+                            Faculty of Mathematics and Computer Science. (4 days a week)
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 flow-root mt-2">
+                        <img class="float-left w-16 h-16 rounded-md" src="Site/Media/fizica.png" alt="unibuc">
+                        <p class=" float-left font-celestenet text-black mt-6">
+                            Faculty of Physics. (1 day a week)
+                        </p>
+                        <h1 class="float-right font-celestenet text-black text-2xl font-bold tracking-wider ">2024-2028</h1>
+                    </div>
+                </div>
+                <div class="bg-light py-8 px-6 rounded-xl shadow">
+                    <div class="flex items-center space-x-4 flow-root">
+                        <img class="float-left w-16 h-16 rounded-md" src="Site/Media/vianu.jpg" alt="vianu">
+                        <p class="float-left font-celestenet text-left text-black mt-6">
+                            Finished my secondary education at "Tudor Vianu" National College of Informatics
+                        </p>
+                        <h1 class="float-right font-celestenet text-black text-2xl font-bold tracking-wider">2021-2024</h1>
+                    </div>
+                </div>
+                <div class="bg-light py-8 px-6 rounded-xl shadow">
+                    <div class="flex items-center space-x-4 flow-root">
+                        <img class="float-left w-16 h-16 rounded-md" src="Site/Media/vianu.jpg" alt="vianu">
+                        <p class="float-left font-celestenet text-left text-black mt-6">
+                            Finished middle school education at "Tudor Vianu" National College of Informatics
+                        </p>
+                        <h1 class="float-right font-celestenet text-black text-2xl font-bold tracking-wider">2016-2020</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+<script>
+    function GoToPage(pagina){
+        if(pagina[0]=='h' && pagina[1]=='t' && pagina[2]=='t' && pagina[3]=='p'){
+            window.location.href = pagina;
+            return;
+        }
+        if(pagina=="main"){
+            window.location.href = "/index.html";
+            return;
+        }
+        window.location.href = "/Site/Pages/"+pagina+".html";
+    }
+</script>
+</html>
