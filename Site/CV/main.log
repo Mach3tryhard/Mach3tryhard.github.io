@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.22)  3 JAN 2025 21:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.22)  18 OCT 2025 22:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -814,16 +814,32 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
 (Font)              `T1/SourceSansPro-TLF/bold/n' on input line 228.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
 (Font)              scaled to size 10.0pt on input line 228.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 260.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 260.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 260.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 260.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
+(Font)              scaled to size 5.0pt on input line 260.
+
+Overfull \hbox (0.73248pt too wide) in paragraph at lines 321--322
+[]\T1/SourceSansPro-TLF/regular/n/10 Game that shows you in-for-ma-tion and dis
+-plays an-i-ma-tron-ics from FNAF Fran-chise. 
+ []
+
 
 
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 333.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 338.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 9.0pt on input line 333.
+(Font)              scaled to size 9.0pt on input line 338.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 333.
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 338.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
-(Font)              scaled to size 9.0pt on input line 333.
+(Font)              scaled to size 9.0pt on input line 338.
 [1
 
 {C:/Users/matei/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/mate
@@ -843,11 +859,11 @@ L3 programming layer <2024-11-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 16293 strings out of 473650
- 282940 string characters out of 5717934
- 689513 words of memory out of 5000000
- 39152 multiletter control sequences out of 15000+600000
- 659682 words of font info for 69 fonts, out of 8000000 for 9000
+ 16316 strings out of 473650
+ 283303 string characters out of 5717934
+ 691513 words of memory out of 5000000
+ 39166 multiletter control sequences out of 15000+600000
+ 680086 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,80p,309b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/matei/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5
@@ -858,7 +874,7 @@ id.pfb><C:/Users/matei/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourcesa
 nspro/SourceSansPro-Bold.pfb><C:/Users/matei/AppData/Local/Programs/MiKTeX/font
 s/type1/adobe/sourcesanspro/SourceSansPro-It.pfb><C:/Users/matei/AppData/Local/
 Programs/MiKTeX/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb>
-Output written on main.pdf (2 pages, 236382 bytes).
+Output written on main.pdf (2 pages, 236883 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  10 named destinations out of 1000 (max. 500000)
