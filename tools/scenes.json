@@ -1,0 +1,12 @@
+[
+  { "name": "menu", "wait": 1200 },
+  { "name": "hub", "view": { "x": 0, "z": 5.0, "yaw": 3.1416, "pitch": 0.1, "hud": false }, "wait": 6000 },
+  { "name": "doors", "view": { "x": 0, "z": 12.2, "yaw": 0, "pitch": 0.05, "hud": false }, "wait": 6000 },
+  { "name": "corridor", "view": { "x": -10.8, "z": -3, "yaw": 0, "pitch": 0.02, "hud": false }, "wait": 6000 },
+  { "name": "sun", "view": { "x": -10.8, "z": -23, "yaw": 0, "pitch": 0.06, "hud": false }, "wait": 5000 },
+  { "name": "education", "view": { "x": 3.6, "z": -2, "yaw": 0, "pitch": 0.02, "hud": false }, "wait": 5000 },
+  { "name": "short-cv", "cv": "short", "wait": 1200, "close": true },
+  { "name": "long-cv", "cv": "long", "wait": 1200, "close": true },
+  { "name": "find-me", "cv": "find", "wait": 1200, "close": true },
+  { "name": "mobile", "viewport": { "width": 390, "height": 844, "mobile": true }, "reload": true, "wait": 5000 }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "matei-sirghe-cv",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Matei Sîrghe — Curriculum Vitae. A first-person entrance hall with seven hallways: coding projects, video games, CAD 3D modelling, social media, education, contests and experience.",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

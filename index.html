@@ -1,231 +1,286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sîrghe Matei Projects</title>
-    <link rel="icon" type="image/x-icon" href="/Media/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: 'CelesteNetFont';
-            src: url('/path-to-font/celestenet.woff2') format('woff2'),
-                 url('/path-to-font/celestenet.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @layer utilities {
-            .font-celestenet {
-                font-family: 'Poppins', sans-serif;
-            }
-            .bg-dark {
-                background-color: #10111C;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-            }
-            .bg-light {
-                background-color: #E7E2F3;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-            }
-        }
-        .video-bg {
-            position: absolute;
-            width: 100%;
-            height: 40%;
-            object-fit: center;
-            filter: blur(5px);
-        }
-        .header-content {
-            position: relative;
-        }
-        .middle-section {
-            background: url('/Media/background.png')  no-repeat center center fixed;
-            z-index: 3;
-            background-size: cover;
-        }
-    </style>
-</head>
-<body class="relative">
-    <video class="video-bg" autoplay loop muted>
-        <source src="/Media/TitleBack.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <header class="text-white py-44 bg-black">
-        <div class="container mx-auto text-center header-content rounded-none">
-            <h1 class="font-celestenet text-6xl font-bold mb-10 tracking-wider">Sîrghe Matei</h1>
-            <a class="font-celestenet text-xm ">My work and projects.</a>
-            <div class="flex justify-center py-7">
-                <a href="/CV/main.pdf" download class="bg-purple-500 hover:bg-purple-700 text-white text-2xl  py-3 px-8 rounded-sm mr-5 ">
-                    <i class="fas fa-download mr-2"></i>Download CV
-                </a>
-                <button class="bg-purple-500 hover:bg-purple-700 text-white text-2xl py-2 px-8 rounded-sm" onclick="GoToPage('socials')">
-                    <i class="fas fa-user mr-2"></i>My socials
-                </button>
-            </div>
-        </div>
-    </header> 
-    <div class="middle-section text-center header-content py-12 ">
-        <div class="flex justify-between items-start max-w-full px-12 space-x-12">
-            <!-- Left Side -->
-            <div class="w-1/3 flex flex-col space-y-8">
-                <div class="bg-dark py-8 px-6 rounded-xl shadow">
-                    <h1 class="font-celestenet text-left text-white text-2xl font-bold mb-2 tracking-wider">My work</h1>
-                    <p class="font-celestenet text-left text-white mt-4">
-                        What I am currently working on:
-                    </p>
-                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('main')">
-                        Main
-                    </button>
-                    <p class="font-celestenet text-left text-white mt-4">
-                        Software, Projects and Apps I made:
-                    </p>
-                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('software')">
-                        Software
-                    </button>
-                    <p class="font-celestenet text-left text-white mt-4">
-                        Geometry and math related projects:
-                    </p>
-                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('geometry')">
-                        Geometry and Math
-                    </button>
-                    <p class="font-celestenet text-left text-white mt-4">
-                        Physics and Modeling related projects:
-                    </p>
-                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('physics')">
-                        Physics and Modeling
-                    </button>
-                    <p class="font-celestenet text-left text-white mt-4">
-                        Competitive programming websites I use:
-                    </p>
-                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('algorithm')">
-                        Competitive programming
-                    </button>
-                    <p class="font-celestenet text-left text-white mt-4">
-                        Games I have made in my free time:
-                    </p>
-                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('games')">
-                        Games
-                    </button>
-                    <p class="font-celestenet text-left text-white mt-4">
-                        Website and visualizer projects:
-                    </p>
-                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('websites')">
-                        Websites
-                    </button>
-                    <p class="font-celestenet text-left text-white mt-4">
-                        All of my socials:
-                    </p>
-                    <button class="bg-purple-500 hover:bg-purple-700 text-white text-10 w-full py-2 rounded-sm" onclick="GoToPage('socials')">
-                        Socials
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Right Side -->
-            <div class="w-2/3 flex flex-col space-y-8">
-                
-                <!-- NEW IFIN-HH INTERNSHIP -->
-                <div class="bg-light py-8 px-6 rounded-xl shadow">
-                    <div class="flex items-center space-x-4 mt-2 flow-root">
-                        <img class="float-left w-16 h-16 rounded-md" src="/Media/ifin.jpeg" alt="ifin-hh">
-                        <p class="font-celestenet text-black mt-2 float-left font-bold">
-                            Horia Hulubei National Institute (IFIN-HH), HPC Software Engineering Intern
-                        </p>
-                        <p class="font-celestenet text-black mt-2 float-left">
-                            Developed temperature-aware SLURM scheduling logic to mitigate node overheating.
-                        </p>
-                        <p class="font-celestenet text-black mt-2 float-left">
-                            Engineered an MQTT telemetry service for real-time streaming and deployed Linux VMs to profile distributed hardware performance.
-                        </p>
-                        <h1 class="float-right font-celestenet text-black text-2xl font-bold tracking-wider">Jul 2026-Sept 2026</h1>
-                    </div>
-                </div>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050403" />
+  <meta name="author" content="Matei Sîrghe" />
+  <meta name="description" content="Curriculum Vitae — Matei Sîrghe. An entrance hall with seven hallways: coding projects, video games, CAD 3D modelling, social media, education, contests and experience." />
+  <title>Matei Sîrghe — Curriculum Vitae</title>
 
-                <div class="bg-light py-8 px-6 rounded-xl shadow">
-                    <div class="flex items-center space-x-4 flow-root">
-                        <img class="float-left w-16 h-16 rounded-md" src="/Media/asmi.png" alt="asmi">
-                        <p class="float-left font-celestenet text-left text-black mt-6 font-bold">
-                            Association of Mathematics and Computer Science Students Volunteer
-                        </p>
-                        <p class="font-celestenet text-black mt-2 float-left">
-                            Video filming and editing, Graphic Design, Social media management
-                        </p>
-                        <h1 class="float-right font-celestenet text-black text-2xl font-bold tracking-wider">Nov 2024-present</h1>
-                    </div>
-                </div>
-                
-                <div class="bg-light py-8 px-6 rounded-xl shadow">
-                    <div class="flex items-center space-x-4 mt-2 flow-root">
-                        <img class="float-left w-16 h-16 rounded-md" src="/Media/fmi.png" alt="unibuc">
-                        <p class="font-celestenet text-black mt-2 float-left font-bold">
-                            Faculty of Mathematics and Computer Science, Student Tutor
-                        </p>
-                        <p class="font-celestenet text-black mt-2 float-left">
-                            Helping students one year younger than me with the Computer Programming 1 course tought in C.
-                        </p>
-                        <p class="font-celestenet text-black mt-2 float-left">
-                            Also helping with Computer Programming 2 course tought in C++ for practical hours.
-                        </p>
-                        <h1 class="float-right font-celestenet text-black text-2xl font-bold tracking-wider ">Oct 2025-present</h1>
-                    </div>
-                </div>
-                
-                <div class="bg-light py-8 px-6 rounded-xl shadow">
-                    <div class="flex items-center space-x-4 mt-2 flow-root">
-                        <img class="float-left w-16 h-16 rounded-md" src="/Media/unibuc.jpg" alt="unibuc">
-                        <p class="font-celestenet text-black mt-2 float-left">
-                            Currenly doing my undergraduate studies at University of Bucharest.
-                        </p>
-                        <p class="font-celestenet text-black mt-2 float-left">
-                            Computer Science Bachelor's of Engineering, at Faculty of Mathematics and Computer Science and Faculty of Physics.
-                        </p>
-                    </div>
-                    <div class="flex items-center space-x-4 flow-root mt-2">
-                        <img class="float-left w-16 h-16 rounded-md" src="/Media/fmi.png" alt="unibuc">
-                        <p class="float-left font-celestenet text-black mt-6">
-                            Faculty of Mathematics and Computer Science.
-                        </p>
-                    </div>
-                    <div class="flex items-center space-x-4 flow-root mt-2">
-                        <h1 class="float-right font-celestenet text-black text-2xl font-bold tracking-wider ">Oct 2024-Jul 2028</h1>
-                    </div>
-                </div>
-                
-                <div class="bg-light py-8 px-6 rounded-xl shadow">
-                    <div class="flex items-center space-x-4 flow-root">
-                        <img class="float-left w-16 h-16 rounded-md" src="/Media/vianu.jpg" alt="vianu">
-                        <p class="float-left font-celestenet text-left text-black mt-6">
-                            Finished my Highschool education at "Tudor Vianu" National College of Informatics
-                        </p>
-                        <h1 class="float-right font-celestenet text-black text-2xl font-bold tracking-wider">Sep 2020-Jul 2024</h1>
-                    </div>
-                </div>
-                
-                <div class="bg-light py-8 px-6 rounded-xl shadow">
-                    <div class="flex items-center space-x-4 flow-root">
-                        <img class="float-left w-16 h-16 rounded-md" src="/Media/vianu.jpg" alt="vianu">
-                        <p class="float-left font-celestenet text-left text-black mt-6">
-                            Finished middle school education at "Tudor Vianu" National College of Informatics
-                        </p>
-                        <h1 class="float-right font-celestenet text-black text-2xl font-bold tracking-wider">Sep 2016-Jul 2020</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
-</body>
-<script>
-    function GoToPage(pagina){
-        if(pagina[0]=='h' && pagina[1]=='t' && pagina[2]=='t' && pagina[3]=='p'){
-            window.location.href = pagina;
-            return;
-        }
-        if(pagina=="main"){
-            window.location.href = "/index.html";
-            return;
-        }
-        window.location.href = "/Pages/"+pagina+".html";
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050403'/%3E%3Ccircle cx='32' cy='32' r='12' fill='none' stroke='%23dfad78' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%23f2dfc8'/%3E%3C/svg%3E" />
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/museum.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three.module.min.js"
+      }
     }
-</script>
+  </script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <main class="experience" id="experience">
+    <canvas id="world" aria-label="A first-person walk through the curriculum vitae of Matei Sîrghe"></canvas>
+
+    <div class="screen-wash" aria-hidden="true">
+      <div class="screen-wash__vignette"></div>
+    </div>
+
+    <div class="hud" id="hud" aria-hidden="true" inert>
+      <header class="hud__top">
+        <div class="hud__brand">
+          <b class="hud__brand-name">Matei Sîrghe</b>
+          <span class="hud__brand-cv">Curriculum Vitae</span>
+        </div>
+        <button class="hud__live" id="sound-state" type="button" aria-pressed="false"><i></i> Sound on</button>
+      </header>
+
+      <div class="crosshair" id="crosshair" aria-hidden="true">
+        <span class="crosshair__dot"></span>
+      </div>
+
+      <div class="target-card" id="target-card" aria-live="polite">
+        <span class="target-card__meta" id="target-meta"></span>
+        <b class="target-card__title" id="target-title"></b>
+        <span class="target-card__hint" id="target-hint">MOVE CLOSER</span>
+      </div>
+
+      <footer class="hud__bottom">
+        <div class="hud__controls">
+          <span><kbd>WASD</kbd> move</span>
+          <span><kbd>MOUSE</kbd> look</span>
+          <span><kbd>SPACE</kbd> jump</span>
+          <span><kbd>ESC</kbd> release</span>
+        </div>
+      </footer>
+    </div>
+
+    <section class="start-overlay" id="start-overlay" aria-labelledby="start-title">
+      <header class="overlay-head">
+        <span class="cv-label">Curriculum Vitae</span>
+      </header>
+
+      <div class="start-body">
+        <h1 id="start-title">
+          <span>Matei</span>
+          <span>Sîrghe</span>
+        </h1>
+
+        <div class="start-menu">
+          <div class="cv-options" role="group" aria-label="Read the curriculum vitae">
+            <button class="cv-option" type="button" data-cv-panel="short">
+              <span class="cv-option__index">01</span>
+              <span class="cv-option__label">Short CV</span>
+              <span class="cv-option__arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="cv-option" type="button" data-cv-panel="long">
+              <span class="cv-option__index">02</span>
+              <span class="cv-option__label">Long CV</span>
+              <span class="cv-option__arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="cv-option" type="button" data-cv-panel="find">
+              <span class="cv-option__index">03</span>
+              <span class="cv-option__label">Where to find me</span>
+              <span class="cv-option__arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+
+          <button class="enter-button enter-button--launch" id="enter-button" type="button">
+            <span class="enter-button__label">Enter 3D exploration environment</span>
+            <span class="enter-button__arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <p class="start-controls" id="start-controls"><kbd>WASD</kbd><kbd>MOUSE</kbd><kbd>SPACE</kbd><kbd>ESC</kbd></p>
+          <p class="start-note" id="start-note" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reader" id="reader" role="dialog" aria-modal="true" aria-label="Curriculum Vitae reader" aria-hidden="true" hidden>
+      <div class="reader__scrim" data-reader-close></div>
+      <div class="reader__sheet" role="document">
+        <header class="reader__bar">
+          <span class="reader__mark">Matei Sîrghe <i>·</i> CV</span>
+          <button class="reader__close" id="reader-close" type="button">
+            <span>Close</span>
+            <i aria-hidden="true">×</i>
+          </button>
+        </header>
+
+        <div class="reader__scroll" id="reader-scroll">
+          <article class="reader__page" data-cv-page="short" hidden>
+            <header class="reader__identity">
+              <p class="reader__eyebrow">Short CV</p>
+              <h2>Matei Sîrghe</h2>
+              <p class="reader__role">BEng Computer Science · University of Bucharest</p>
+              <ul class="reader__links">
+                <li><a href="https://github.com/Mach3tryhard" target="_blank" rel="noopener noreferrer">github.com/Mach3tryhard</a></li>
+                <li><a href="https://mach3tryhard.github.io/" target="_blank" rel="noopener noreferrer">mach3tryhard.github.io</a></li>
+                <li><a href="https://www.linkedin.com/in/matei-sirghe-b56783312/" target="_blank" rel="noopener noreferrer">linkedin.com/in/matei-sirghe</a></li>
+                <li><a href="mailto:matei.sirghe@gmail.com">matei.sirghe@gmail.com</a></li>
+              </ul>
+            </header>
+
+            <div class="cv-body">
+              <section class="cv-section">
+                <h3>Education</h3>
+                <div class="cv-section__content">
+                  <div class="cv-entry">
+                    <div class="cv-entry__head"><b>University of Bucharest</b><span>Oct 2024 — Jul 2028</span></div>
+                    <p class="cv-entry__role">BEng Computer Science · Current GPA 9.39 / 10.0</p>
+                    <p class="cv-entry__label">Relevant coursework</p>
+                    <p>Data Structures &amp; Algorithms, Object-Oriented Programming, Numerical Methods, Linear Algebra, Calculus</p>
+                  </div>
+                  <div class="cv-entry">
+                    <div class="cv-entry__head"><b>Tudor Vianu National High School of Computer Science</b><span>Sep 2020 — Jul 2024</span></div>
+                    <p class="cv-entry__role">Computer Science Specialization · GPA 9.41 / 10.0</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="cv-section">
+                <h3>Experience</h3>
+                <div class="cv-section__content">
+                  <div class="cv-entry">
+                    <div class="cv-entry__head"><b>Horia Hulubei National Institute (IFIN-HH)</b><span>Jul 2026 — Sep 2026</span></div>
+                    <p class="cv-entry__role">HPC Software Engineering Intern</p>
+                    <ul class="cv-list">
+                      <li>Developed temperature-aware SLURM scheduling logic to mitigate node overheating and optimize resources.</li>
+                      <li>Engineered an MQTT application for rapid remote profile deployment and automated node provisioning.</li>
+                      <li>Provisioned clean Linux VMs to systematically test and validate automated profile deployments.</li>
+                    </ul>
+                  </div>
+                  <div class="cv-entry">
+                    <div class="cv-entry__head"><b>University of Bucharest, Faculty of Mathematics and Informatics</b><span>Oct 2025 — present</span></div>
+                    <p class="cv-entry__role">Student Tutor</p>
+                    <ul class="cv-list">
+                      <li>Instructed undergraduate students in Computer Programming I (C) and II (C++).</li>
+                      <li>Guided lab sessions on pointers, manual memory management, dynamic structures, and algorithmic complexity.</li>
+                      <li>Assisted students during tutoring hours with live debugging and code optimization.</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section class="cv-section">
+                <h3>Projects</h3>
+                <div class="cv-section__content">
+                  <div class="cv-entry">
+                    <div class="cv-entry__head"><b><a href="https://github.com/Mach3tryhard/AI-Dungeon-Master" target="_blank" rel="noopener noreferrer">AI Dungeon Master (Terminal RPG)</a></b><span>Sep 2026</span></div>
+                    <p class="cv-entry__tech">Python · Ollama (Llama 3) · Textual · GitHub Actions</p>
+                    <ul class="cv-list">
+                      <li>Engineered a Python game engine integrated with a local Llama 3 LLM for dynamic narrative generation.</li>
+                      <li>Architected a strict MVC pattern to isolate deterministic combat mechanics from the AI narrative layer.</li>
+                      <li>Designed a CI/CD pipeline via GitHub Actions using Pytest for validation and PyInstaller for deployment.</li>
+                    </ul>
+                  </div>
+                  <div class="cv-entry">
+                    <div class="cv-entry__head"><b><a href="https://github.com/Mach3tryhard/Find-Rakis" target="_blank" rel="noopener noreferrer">Find Rakis (Video Game)</a></b><span>Oct 2025</span></div>
+                    <p class="cv-entry__tech">C++23 · SFML · CMake · OOP</p>
+                    <ul class="cv-list">
+                      <li>Engineered a 2D physics-driven space game using C++23, relying exclusively on SFML for rendering.</li>
+                      <li>Implemented procedural surface generation via Perlin noise and dithering passes for real-time rendering.</li>
+                      <li>Architected a custom object-oriented framework to efficiently manage game resources and simulation state.</li>
+                    </ul>
+                  </div>
+                  <div class="cv-entry">
+                    <div class="cv-entry__head"><b><a href="https://github.com/Mach3tryhard/Song-Approximation" target="_blank" rel="noopener noreferrer">Song-Approximation</a></b><span>Jun 2025</span></div>
+                    <p class="cv-entry__tech">Python · STFT · SVD · QR Factorization</p>
+                    <ul class="cv-list">
+                      <li>Built a lossy .wav compression pipeline converting time-domain signals via Short-Time Fourier Transforms.</li>
+                      <li>Implemented SVD and QR factorization to compute low-rank approximations and compress spectral data.</li>
+                      <li>Reconstructed audio via Inverse STFT and analyzed cumulative errors across multiple compression cycles.</li>
+                    </ul>
+                  </div>
+                  <div class="cv-entry">
+                    <div class="cv-entry__head"><b><a href="https://github.com/Mach3tryhard/ChessHacker" target="_blank" rel="noopener noreferrer">ChessHacker (Real-Time Analyzer)</a></b><span>Mar 2025</span></div>
+                    <p class="cv-entry__tech">Python · Playwright · Stockfish Engine</p>
+                    <ul class="cv-list">
+                      <li>Developed an automated board observer parsing live web game states from the DOM using Playwright.</li>
+                      <li>Interfaced parsed board positions with the Stockfish engine via asynchronous subprocesses for evaluation.</li>
+                      <li>Implemented adjustable engine depth parameters to dynamically balance analytical precision with execution speed.</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section class="cv-section">
+                <h3>Awards</h3>
+                <div class="cv-section__content">
+                  <div class="cv-entry">
+                    <p><b>Hackathons</b>: Line Follower Robotics (FMI x NXP Romania) 6/16 (2026) · Smarthack Finalist (2024, 2026)</p>
+                    <p><b>Romanian National Olympiad in Informatics</b>: Bronze Medal (2017) · 4-Time National Finalist (2019, 2022, 2024)</p>
+                    <p><b>Qube2Space International Competition</b>: Top 10 Placement at the International Final Stage</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="cv-section">
+                <h3>Skills</h3>
+                <div class="cv-section__content">
+                  <div class="cv-entry">
+                    <p><b>Languages</b>: C/C++ (Modern C++23), Python, JavaScript, SQL, Assembly, C#</p>
+                    <p><b>Systems &amp; Technologies</b>: SLURM, MQTT, Linux/UNIX Environments, Docker, CMake, Git, GitHub Actions</p>
+                    <p><b>Frameworks &amp; Libraries</b>: SFML, Node, Express, Playwright, Three.js, Textual, Oracle SQL, PL/SQL</p>
+                    <p><b>Spoken Languages</b>: Romanian (Native), English (C2 Proficient)</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <footer class="reader__foot">Last updated September 2026 · <a href="mailto:matei.sirghe@gmail.com">matei.sirghe@gmail.com</a></footer>
+          </article>
+
+          <article class="reader__page" data-cv-page="long" hidden></article>
+
+          <article class="reader__page" data-cv-page="find" hidden></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pause-overlay" id="pause-overlay" aria-labelledby="pause-title" hidden>
+      <div class="pause-card">
+        <h2 id="pause-title">Paused</h2>
+        <button class="enter-button enter-button--small" id="resume-button" type="button">
+          <span class="enter-button__label">Resume</span>
+          <span class="enter-button__arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="enter-button enter-button--small" id="menu-button" type="button">
+          <span class="enter-button__label">Back to menu</span>
+          <span class="enter-button__arrow" aria-hidden="true">↩</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="loading" id="loading" role="status" aria-live="polite">
+      <span class="loading__name">Matei Sîrghe</span>
+      <span class="loading__label">Loading</span>
+      <span class="loading__line"><i></i></span>
+    </div>
+
+    <div class="error-card" id="error-card" role="alert" hidden>
+      <h2>WebGL unavailable.</h2>
+      <p id="error-message">This experience needs a WebGL-capable browser.</p>
+      <button class="enter-button enter-button--small" id="reload-button" type="button">
+        <span class="enter-button__label">Reload</span>
+        <span class="enter-button__arrow" aria-hidden="true">↗</span>
+      </button>
+    </div>
+
+    <div class="touch-ui" id="touch-ui" aria-hidden="true">
+      <div class="touch-stick" id="touch-stick">
+        <span class="touch-stick__knob" id="touch-knob"></span>
+        <span class="touch-stick__label">MOVE</span>
+      </div>
+      <span class="touch-look-hint">DRAG TO LOOK</span>
+      <button class="touch-jump" id="touch-jump" type="button" aria-label="Jump">Jump</button>
+    </div>
+
+    <noscript>
+      <div class="noscript">JavaScript is required.</div>
+    </noscript>
+  </main>
+</body>
 </html>
